@@ -5,6 +5,14 @@
  학번과 이름이 적힌 .txt 파일을 받아 linked list로 저장합니다.  
  그 후에 이름을 입력받으면 학번을 출력하고, 학번을 입력받으면 이름을 출력합니다.  
  
+## 들어가기 전에
+ 정상적인 프로젝트의 실행을 위해, 프로젝트 또는 .exe파일과 동일한 위치에  
+ student.txt 파일과 input.txt 파일이 있어야 합니다.  
+ <br />
+ student.txt 파일은 학생들의 학번과 이름이 적힌 파일입니다.  
+ input.txt 파일은 내가 찾고 싶은 학번 또는 이름이 적힌 파일입니다.  
+ <br />
+ 
 ## Student 구조체  
  ```
  typedef struct Student{
@@ -152,3 +160,9 @@ void findList(struct Student *ptr, struct Student *head){
  (만약 일치하는 이름이 없다면 없는 학번이라고 출력합니다.)  
  만약 input.txt에서 학번을 읽었다면 이름을 출력합니다.  
  (역시 일치하는 학번이 없다면 없는 학번이라고 출력합니다.)  
+
+## 실행 결과
+![ssearch_result_linked](https://user-images.githubusercontent.com/41851641/48906254-39b65580-eea7-11e8-9c79-75d627b2368a.png)  
+ student.txt 파일에 "홍길동" 이 있었기 때문에 해당하는 학번을 찾았습니다.  
+ student.txt 파일에 "2017104321" 과 일치하는 학번이 있기 때문에 이름을 찾았습니다.  
+ student.txt 파일에 "2014104654" 와 일치하는 학번이 없기 때문에 없는 학번이라고 알려줍니다.  
