@@ -12,6 +12,7 @@
  student.txt 파일은 학생들의 학번과 이름이 적힌 파일입니다.  
  input.txt 파일은 내가 찾고 싶은 학번 또는 이름이 적힌 파일입니다.  
  <br />
+ <br />
  
 ## Student 구조체  
  ```
@@ -22,7 +23,9 @@
 } S_tudent;
 ```
  이름을 저장할 name 변수, 학번을 저장할 studentId 변수를 선언합니다.  
- linked list 자료구조를 활용하므로 다음 노드를 가리킬 next 포인터를 선언합니다.  
+ linked list 자료구조를 활용하므로 다음 노드를 가리킬 next 포인터를 선언합니다.   
+ <br />
+ <br />
  
 ## main.c
 ```
@@ -59,6 +62,8 @@ int main(void) {
  findList 함수에서 input.txt 파일을 읽어와 linked list를 searching 합니다.  
  Searching 결과는 커맨드라인에 표시합니다.  
  그 후 모든 linked list의 노드들을 free 하고 프로그램을 종료합니다.  
+ <br />
+ <br />
  
 ## readList 함수
 ```
@@ -82,6 +87,8 @@ void readList(struct Student *ptr){
  student.txt 파일을 읽기전용("r") 으로 읽어서 end of file(feof)이 될 때 까지 읽어서  
  createNewStudent 함수를 이용해 linked list 형태로 저장합니다.  
  createNewStudent 함수는 새로 만든 노드의 주소를 반환합니다.  
+ <br />
+ <br />
  
 ## createNewStudent 함수
 ```
@@ -101,6 +108,8 @@ S_tudent *createNewStudent(struct Student *target, char *inputname, unsigned lon
  새로 만든 노드의 주소를 반환합니다. 따라서 아래 코드에서 ptr 변수는 새로 만든 노드,    
  즉 linked list의 마지막 노드를 가리키는 것을 알 수 있습니다.  
  >ptr = createNewStudent(ptr, inputName, inputNum);  
+ <br />
+ <br />
 
 ## findList 함수
 ```
@@ -160,9 +169,13 @@ void findList(struct Student *ptr, struct Student *head){
  (만약 일치하는 이름이 없다면 없는 학번이라고 출력합니다.)  
  만약 input.txt에서 학번을 읽었다면 이름을 출력합니다.  
  (역시 일치하는 학번이 없다면 없는 학번이라고 출력합니다.)  
+ <br />
+ <br />
 
 ## 실행 결과
 ![ssearch_result_linked](https://user-images.githubusercontent.com/41851641/48906254-39b65580-eea7-11e8-9c79-75d627b2368a.png)  
  student.txt 파일에 "홍길동" 이 있었기 때문에 해당하는 학번을 찾았습니다.  
  student.txt 파일에 "2017104321" 과 일치하는 학번이 있기 때문에 이름을 찾았습니다.  
  student.txt 파일에 "2014104654" 와 일치하는 학번이 없기 때문에 없는 학번이라고 알려줍니다.  
+
+<br />
